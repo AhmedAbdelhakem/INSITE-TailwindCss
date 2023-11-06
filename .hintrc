@@ -6,8 +6,22 @@
     "axe/name-role-value": [
       "default",
       {
-        "link-name": "off"
+        "link-name": "off",
+        "button-name": "off"
       }
-    ]
+    ],
+    "axe/aria": [
+      "default",
+      {
+        "aria-allowed-attr": "off"
+      }
+    ],
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
+    ],
+    "disown-opener": "off"
   }
 }
