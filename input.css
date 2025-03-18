@@ -1,9 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@theme {
+  --container-*: initial;
+  --container-xl: 1260px;
+
+  --color-primary: #fcaf2a;
+  --color-secondary: #545f71;
+  --color-border-color: #343a40;
+  --color-Picks-color: #b4b4b4;
+  --color-text-warning: #ffc107;
+  --color-text-muted: #6c757d;
+
+  --font-sans: Red Hat Display;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 .body {
     font-family: 'Red Hat Display', sans-serif;

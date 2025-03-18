@@ -32,7 +32,7 @@
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <button type="button"
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu" aria-expanded="false">
             <span class="absolute -inset-0.5"></span>
             <span class="sr-only">Open main menu</span>
@@ -60,14 +60,14 @@
         <div x-data="{modalOpen: false}">
           <div @click="modalOpen = !modalOpen"
             class="border transition duration-200 cursor-pointer border-black hover:bg-primary border-solid flex items-center justify-center px-4 py-1 sm:items-stretch sm:justify-start">
-            <div class="flex z-10 flex-shrink-0 items-center">
+            <div class="flex z-10 shrink-0 items-center">
               <i class="fas fa-share-alt text-xl"></i>
               <!-- Main modal -->
               <div x-show="modalOpen" x-transition.opacity.duration.250ms
                 class="fixed z-10 overflow-hidden bg-black bg-opacity-50 px-4 md:inset-0 pt-40">
                 <div class="relative w-full px-[500px] max-w-2xl max-h-full pointer-events-auto">
                   <!-- Modal content -->
-                  <div class="relative bg-white rounded-lg shadow pb-4 px-4 pt-0">
+                  <div class="relative bg-white rounded-lg shadow-sm pb-4 px-4 pt-0">
                     <!-- Modal header -->
                     <div class="flex items-end p-0">
                       <button @click="open = false" type="button"
